@@ -1,5 +1,5 @@
 node('DockerServer11') {
-   def repoUrl = 'git@*****.git'
+   def repoUrl = 'https://github.com/zhanghanwei2008/springboot-sharding-JDBC-demo'
     def repoBranch = 'dev'
     def gitDir = ''
     def workspace = ''
@@ -36,11 +36,11 @@ node('DockerServer11') {
 	
 	stage('获取代码'){
 		 
-				echo "start fetch code from git:${REPOSITORY}"
+				echo "start fetch code from git:${repoUrl}"
 				//清空当前目录
 				// deleteDir()
 				//拉去代码	
-				git "${REPOSITORY}"
+				git "${repoUrl}"
 			
 			
 		}
